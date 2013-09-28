@@ -39,6 +39,10 @@
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
+            android:name="com.example.bookfood.menu.getfoodMenuActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
             android:name="com.example.bookfood.user.logonActivity"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>

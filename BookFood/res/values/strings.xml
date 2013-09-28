@@ -13,6 +13,7 @@
     <string name="logon">登录</string>
     <string name="feedback">留言</string>
     <string name="aboutus">关于我们</string> 
+    <string name="getfood">谁去拿快递</string>
     
     <!-- 登录页面 -->
     <string name="login_username_label">账户</string>
@@ -57,6 +58,9 @@
     <string name="error">提交失败</string>  
     <string name="get_request">Get请求提交</string>  
     <string name="post_request">Post请求提交</string>  
+    
+    <!-- 取快递页面 -->
+    <string name="roll">摇一摇</string>
     
 
 </resources>
