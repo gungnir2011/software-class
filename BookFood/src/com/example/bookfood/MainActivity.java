@@ -19,6 +19,7 @@ import com.example.bookfood.dataTrans.Dish;
 import com.example.bookfood.dataTrans.JsonParse;
 import com.example.bookfood.database.dataBaseHelper;
 import com.example.bookfood.menu.beverageMenuActivity;
+import com.example.bookfood.menu.getfoodMenuActivity;
 import com.example.bookfood.menu.noodleMenuActivity;
 import com.example.bookfood.menu.riceMenuActivity;
 import com.example.bookfood.menu.stirMenuActivity;
@@ -48,6 +49,7 @@ public class MainActivity extends Activity {
 	private Button aboutus_btn;
 	private Button feedback_btn;
 	private Button cart_btn;
+	private Button getfood_btn;
 
 	private List<Dish> dishes;
 	private static final String urlPath = "http://10.42.0.1:8084/____manage/PostServlet";
@@ -158,6 +160,7 @@ public class MainActivity extends Activity {
 		aboutus_btn = (Button) findViewById(R.id.aboutus_btn);
 		feedback_btn = (Button) findViewById(R.id.feedback_btn);
 		cart_btn = (Button) findViewById(R.id.cart_btn);
+		getfood_btn = (Button) findViewById(R.id.getfood_btn);
 	}
 
 	/**
@@ -167,6 +170,15 @@ public class MainActivity extends Activity {
 	private void setListeners() {
 		// TODO Auto-generated method stub
 
+		getfood_btn.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				Intent intent = new Intent();
+				intent.setClass(MainActivity.this, getfoodMenuActivity.class);
+				startActivity(intent);
+
+			}
+		});
 		/**
 		 * 点击按钮打开“盖饭”菜单
 		 */
