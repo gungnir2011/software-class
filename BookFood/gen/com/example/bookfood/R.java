@@ -33,7 +33,6 @@ public final class R {
         public static final int aboutus_btn=0x7f080008;
         public static final int address_edit=0x7f08001e;
         public static final int beverage_btn=0x7f080004;
-        public static final int button1=0x7f08001c;
         public static final int cart_btn=0x7f080005;
         public static final int clock_dialog=0x7f080015;
         public static final int confrim_intoCart=0x7f08001a;
@@ -74,6 +73,7 @@ public final class R {
         public static final int register_password_edit=0x7f08002f;
         public static final int register_username_edit=0x7f08002e;
         public static final int rice_btn=0x7f080001;
+        public static final int roll_btn=0x7f08001c;
         public static final int send_btn=0x7f080020;
         public static final int send_item=0x7f08000c;
         public static final int signin_btn=0x7f080028;

@@ -4,18 +4,21 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <ListView
-        android:id="@+id/getfood_listview"
-        android:layout_width="match_parent"
-        android:layout_height="420dp" >
-    </ListView>
-
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/roll_btn"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_gravity="bottom|right"
-        android:layout_weight="1"
-        android:text="@string/roll" />
+        android:layout_weight="0"
+        android:text="@string/roll"  >
+    </Button>
+    
+    <ListView
+        android:id="@+id/getfood_listview"
+        android:layout_width="fill_parent"
+     	android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+    </ListView>
 
 </LinearLayout>
