@@ -4,21 +4,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/roll_btn"
+    <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_gravity="bottom|right"
-        android:layout_weight="0"
-        android:text="@string/roll"  >
-    </Button>
-    
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="@android:dimen/app_icon_size" />
+
     <ListView
         android:id="@+id/getfood_listview"
-        android:layout_width="fill_parent"
-     	android:layout_height="fill_parent"
-        android:layout_weight="1" >
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
     </ListView>
 
 </LinearLayout>

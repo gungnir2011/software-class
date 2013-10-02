@@ -39,7 +39,7 @@ public final class R {
         public static final int empty_tip=0x7f080011;
         public static final int feedback_btn=0x7f080007;
         public static final int getfood_btn=0x7f08000a;
-        public static final int getfood_listview=0x7f08001b;
+        public static final int getfood_listview=0x7f08001c;
         public static final int item_name=0x7f080016;
         public static final int item_num_edit=0x7f080019;
         public static final int item_pic=0x7f080017;
@@ -73,7 +73,6 @@ public final class R {
         public static final int register_password_edit=0x7f08002f;
         public static final int register_username_edit=0x7f08002e;
         public static final int rice_btn=0x7f080001;
-        public static final int roll_btn=0x7f08001c;
         public static final int send_btn=0x7f080020;
         public static final int send_item=0x7f08000c;
         public static final int signin_btn=0x7f080028;
@@ -81,6 +80,7 @@ public final class R {
         public static final int stir_btn=0x7f080002;
         public static final int sum_label=0x7f08000d;
         public static final int sum_price=0x7f08000f;
+        public static final int textView1=0x7f08001b;
         public static final int usercall_edit=0x7f08001d;
     }
     public static final class layout {
