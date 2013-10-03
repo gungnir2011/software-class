@@ -61,6 +61,6 @@
     
     <!-- 取快递页面 -->
     <string name="roll">摇一摇</string>
-    
+    <string name="getfood_text">摇动手机可随机出现点数，点数最小的人去拿外卖</string>
 
 </resources>

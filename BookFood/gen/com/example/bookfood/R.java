@@ -122,6 +122,7 @@ public final class R {
         public static final int fill_info=0x7f05001b;
         public static final int get_request=0x7f05002b;
         public static final int getfood=0x7f05000c;
+        public static final int getfood_text=0x7f05002e;
         public static final int hello_world=0x7f050001;
         public static final int item_confirm=0x7f050019;
         /**  菜单页面 

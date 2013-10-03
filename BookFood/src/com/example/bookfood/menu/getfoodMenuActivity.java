@@ -2,6 +2,7 @@ package com.example.bookfood.menu;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import com.example.bookfood.MainActivity;
 import com.example.bookfood.R;
@@ -40,27 +41,30 @@ public class getfoodMenuActivity extends Activity implements SensorEventListener
 	//private Button roll_btn;
 	private SensorManager sensor_man;
 	private Sensor sensor;
-	private float gravity[] = new float[3]; 
+	//private float gravity[] = new float[3]; 
 	private List<String> data = new ArrayList<String>();
+	private int old_num[] = {0,1,2,3,4,5,6,7,8,9,0};
+	//private int found_tag;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.getfood_layout);
+		init_old_num();
 		lv = (ListView) findViewById(R.id.getfood_listview);
 		sensor_man = (SensorManager) this.getSystemService(SENSOR_SERVICE);
 		sensor = sensor_man.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        lv.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,getData()));
+        lv.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,data));
 		//setContentView(R.layout.getfood_layout);
 		//setContentView(lv);
 	}
 	
 	private List<String> getData(){
         
-       
-       int rand=(int)(Math.random()*10);
-       data.add("你的数字是："+rand);
-        
+       int current = (old_num[old_num.length-1])%10;
+       int rand = old_num[current];
+       data.add("你的点数是："+rand);   
+       old_num[old_num.length-1]+=1;
        return data;
    }
 	
@@ -80,7 +84,7 @@ public class getfoodMenuActivity extends Activity implements SensorEventListener
 		int sensorType = event.sensor.getType();
 		float[] values = event.values;  
 		if(sensorType == Sensor.TYPE_ACCELEROMETER){ 
-		   if((Math.abs(values[0])>14||Math.abs(values[1])>14||Math.abs(values[2])>14)){  
+		   if((Math.abs(values[0])>10||Math.abs(values[1])>10||Math.abs(values[2])>10)){  
 			   lv.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,getData()));
 		   }
 		}
@@ -89,5 +93,17 @@ public class getfoodMenuActivity extends Activity implements SensorEventListener
 	public void onAccuracyChanged(Sensor arg0, int arg1) {
 		// TODO Auto-generated method stub
 		
+	}	
+	
+	private void init_old_num(){
+		int[] ranArr = new int[10];
+		Random ran = new Random();
+		for (int i = 0; i<old_num.length-2;i++){
+				int j = ran.nextInt(old_num.length-1 - i);
+				ranArr[i] = old_num[j];
+				old_num[j] = old_num[old_num.length-2 - i];
+		}
+		old_num = ranArr.clone();
 	}
+	
 }

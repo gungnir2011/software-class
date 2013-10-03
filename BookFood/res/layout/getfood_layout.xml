@@ -2,19 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:orientation="vertical" >
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="@android:dimen/app_icon_size" />
+        android:background="#4169E1"
+        android:text="@string/getfood_text"
+        android:textColor="@color/white"
+        android:textSize="22dip" />
 
     <ListView
         android:id="@+id/getfood_listview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:background="#838B8B"
+     	android:cacheColorHint="#00000000" >
     </ListView>
 
 </LinearLayout>
