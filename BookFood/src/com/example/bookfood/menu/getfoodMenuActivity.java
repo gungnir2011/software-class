@@ -84,7 +84,7 @@ public class getfoodMenuActivity extends Activity implements SensorEventListener
 		int sensorType = event.sensor.getType();
 		float[] values = event.values;  
 		if(sensorType == Sensor.TYPE_ACCELEROMETER){ 
-		   if((Math.abs(values[0])>10||Math.abs(values[1])>10||Math.abs(values[2])>10)){  
+		   if((Math.abs(values[0])>15||Math.abs(values[1])>15||Math.abs(values[2])>15)){  
 			   lv.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,getData()));
 		   }
 		}
