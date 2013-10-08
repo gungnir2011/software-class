@@ -45,6 +45,7 @@ public class getfoodMenuActivity extends Activity implements SensorEventListener
 	private List<String> data = new ArrayList<String>();
 	private int old_num[] = {0,1,2,3,4,5,6,7,8,9,0};
 	//private int found_tag;
+	private int rate = 200000;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -71,7 +72,7 @@ public class getfoodMenuActivity extends Activity implements SensorEventListener
 	@Override
 	protected void onResume(){
 		super.onResume();
-		sensor_man.registerListener(this, sensor, sensor_man.SENSOR_DELAY_NORMAL);
+		sensor_man.registerListener(this, sensor, rate);
 	}
 	
 	@Override
@@ -84,7 +85,7 @@ public class getfoodMenuActivity extends Activity implements SensorEventListener
 		int sensorType = event.sensor.getType();
 		float[] values = event.values;  
 		if(sensorType == Sensor.TYPE_ACCELEROMETER){ 
-		   if((Math.abs(values[0])>15||Math.abs(values[1])>15||Math.abs(values[2])>15)){  
+		   if((Math.abs(values[0])>13||Math.abs(values[1])>13||Math.abs(values[2])>13)){  
 			   lv.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,getData()));
 		   }
 		}
