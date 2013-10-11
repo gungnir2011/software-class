@@ -73,7 +73,7 @@ public class getfoodMenuActivity extends Activity implements SensorEventListener
 	@Override
 	protected void onResume(){
 		super.onResume();
-		sensor_man.registerListener(this, sensor, sensor_man.SENSOR_DELAY_UI);
+		sensor_man.registerListener(this, sensor, sensor_man.SENSOR_DELAY_GAME);
 	}
 	
 	@Override
