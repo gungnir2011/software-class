@@ -78,6 +78,9 @@ public class sendInfoConfirmDialog extends Activity {
 				else if ("".equals(phone_edit.getText().toString().trim()))
 					Toast.makeText(sendInfoConfirmDialog.this, "请输入正确的联系电话",
 							Toast.LENGTH_SHORT).show();
+				else if ("".equals(username_edit.getText().toString().trim()))
+					Toast.makeText(sendInfoConfirmDialog.this, "请输入正确的用户名",
+							Toast.LENGTH_SHORT).show();
 				else {
 					if (sendTOserver()) {
 						// 清空cart列表
@@ -108,7 +111,7 @@ public class sendInfoConfirmDialog extends Activity {
 			DefaultHttpClient client = new DefaultHttpClient();
 			List<NameValuePair> list = new ArrayList<NameValuePair>();
 			HttpPost post = new HttpPost(
-					"http://192.168.1.107:8084/____manage/GetServlet");
+					"http://192.168.1.101:8084/____manage/GetServlet");
 			// 打包顾客信息
 			String getUsername = username_edit.getText().toString();
 			String getAddress = address_edit.getText().toString();

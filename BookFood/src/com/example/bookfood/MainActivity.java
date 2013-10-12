@@ -52,7 +52,7 @@ public class MainActivity extends Activity {
 	private Button getfood_btn;
 
 	private List<Dish> dishes;
-	private static final String urlPath = "http://192.168.1.107:8084/____manage/PostServlet";
+	private static final String urlPath = "http://192.168.1.101:8084/____manage/PostServlet";
 	private static final String TAG = "MainActivity";
 
 	private dataBaseHelper dbHelper = null;

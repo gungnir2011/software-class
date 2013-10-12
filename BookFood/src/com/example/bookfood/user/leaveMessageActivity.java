@@ -77,7 +77,7 @@ public class leaveMessageActivity extends Activity {
 			DefaultHttpClient client = new DefaultHttpClient();
 			List<NameValuePair> list = new ArrayList<NameValuePair>();
 			HttpPost post = new HttpPost(
-					"http://192.168.1.107:8084/____manage/GetServlet");
+					"http://192.168.1.101:8084/____manage/GetServlet");
 			SharedPreferences getusername = getSharedPreferences("userName_file", MODE_PRIVATE);
 		    String getUsername = getusername.getString("saved_username", null);
 		    
